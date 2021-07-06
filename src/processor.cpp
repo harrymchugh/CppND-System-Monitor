@@ -44,10 +44,6 @@ float Processor::Utilization() {
     NonIdle = user + nice + system + irq + softirq + steal;
     Total = Idle + NonIdle;
 
-    std::cout << Total << std::endl;
-    std::cout << Idle << std::endl;
-    std::cout << (Total - Idle) << std::endl;
-
     util = ((float)(Total - Idle) / (float)Total);
 
     return util; 
